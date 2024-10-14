@@ -6,7 +6,5 @@ on:
 
 jobs:
     print_info:
-        runs-on: ubuntu-latest
         uses: alsmk/CI-CD_tasks/.github/workflows/printing_info.yml@main
-        env: 
-            TOKEN: ${{  secrets.TOKEN  }}
+        
