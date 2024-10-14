@@ -11,8 +11,8 @@ jobs:
         uses: alsmk/CI-CD_tasks/.github/workflows/formatting.yml@main
     print_info:
         uses: alsmk/CI-CD_tasks/.github/workflows/printing_info.yml@main
-        env:
-            TOKEN: ${{ secrets.TOKEN  }}
+        secrets:
+            inherit
     test:
         uses: alsmk/CI-CD_tasks/.github/workflows/testing.yml@main
         
