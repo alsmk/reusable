@@ -7,4 +7,7 @@ on:
 jobs:
     print_info:
         uses: alsmk/CI-CD_tasks/.github/workflows/printing_info.yml@main
+        secrets:
+            inherit
+            
         
