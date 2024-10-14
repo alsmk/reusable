@@ -3,11 +3,11 @@ on:
     push:
         branches:
             -main
+    workflow_dispatch:
 
 jobs:
-    print_info:
-        uses: alsmk/CI-CD_tasks/.github/workflows/printing_info.yml@main
-        secrets:
-            inherit
-            
+    formatcode:
+        uses: alsmk/CI-CD_tasks/.github/workflows/formatting.yml@main
+        
+
         
