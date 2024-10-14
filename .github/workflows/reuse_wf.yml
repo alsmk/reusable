@@ -1,0 +1,14 @@
+name: reusable workflow
+on:
+    push:
+        branches:
+            -main
+
+jobs:
+    print_info:
+        runs-on: ubuntu-latest
+        steps:
+            - name: use the old workflow
+              uses: alsmk/CI-CD_tasks/.github/workflows/printing_info.yml@main
+              env: 
+                TOKEN: ${{  secrets.TOKEN  }}
