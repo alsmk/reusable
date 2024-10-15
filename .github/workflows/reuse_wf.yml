@@ -4,8 +4,8 @@ on:
         branches:
             -main
     workflow_dispatch:
-    
-
+env:
+    TOKEN: ${{  secrets.TOKEN  }}
 jobs:
     formatcode:
         uses: alsmk/CI-CD_tasks/.github/workflows/formatting.yml@main
@@ -17,4 +17,5 @@ jobs:
         uses: alsmk/CI-CD_tasks/.github/workflows/testing.yml@main
         secrets:
             TOKEN: ${{  secrets.TOKEN  }}
+      
         
