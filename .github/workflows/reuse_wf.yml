@@ -12,7 +12,9 @@ jobs:
     print_info:
         uses: alsmk/CI-CD_tasks/.github/workflows/printing_info.yml@main
         secrets:
-            inherit
+            TOKEN: ${{ secrets.TOKEN  }}
     test:
         uses: alsmk/CI-CD_tasks/.github/workflows/testing.yml@main
+        secrets:
+            TOKEN: ${{  secrets.TOKEN  }}
         
